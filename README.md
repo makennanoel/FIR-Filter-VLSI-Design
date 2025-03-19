@@ -18,11 +18,6 @@ This project focuses on designing and implementing an **FIR filter** with **99 t
 
     ![Unquantized Phase Response](https://github.com/user-attachments/assets/8323348a-8ef8-47c6-9e7c-17d4224a06e8)
 
-
-4. Graph Interpretation
-
-[]
-
 ## FIR Filter VLSI Architecture Explanation
 
 3 Different Architectures are explored:
