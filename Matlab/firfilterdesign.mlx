@@ -1,0 +1,60 @@
+% Part I: Filter Design/Coefficient Calculations
+
+Rp = 1;  % Passband ripple in dB
+Rs = 80; % Stopband attenuation in dB
+Fs = 2000;  % Sampling frequency in Hz
+
+% Define band edges in Hz (NOT normalized)
+F = [200 230];  
+A = [1 0];
+
+% Compute deviation values
+dev = [(10^(Rp/20)-1)/(10^(Rp/20)+1)  10^(-Rs/20)];
+
+% Use firpmord to estimate order and weights
+[n, fo, ao, w] = firpmord(F, A, dev, Fs);
+n = 99; % Ensure at least 100 taps
+
+% Design filter using firpm
+b = firpm(n, fo, ao, w);
+
+% Visualize the filter response
+display(b)
+
+% Part II: Quantization
+bfixed = round(b*2^23);
+display(bfixed)
+sum_bfixed = sum(bfixed);  % Quantized sum
+display(sum_bfixed);
+
+% Part III: Error Analysis
+%Calculates the errors due to rounding
+error = b - (bfixed/(2^23))
+
+% Graph the filters
+fvtool(b) % Floating-point filter
+fvtool(bfixed / 2^23) % Quantized filter
+
+% Save in a file
+file = fopen(fullfile('/MATLAB Drive', 'coeffs.mem'), 'w');
+fprintf(file, "%d\n", bfixed); % Saves one coefficient per line
+fclose(file);
+
+% Open file for writing binary coefficients
+file_bin = fopen('coeffs_binary.mem', 'w');
+
+bit_width = 24;
+% Convert coefficients to 2's complement binary and write to file
+for i = 1:length(bfixed)
+    if bfixed(i) < 0
+        bin_value = dec2bin(bitand(int32(bfixed(i)), int32(2^bit_width - 1)), bit_width);
+    else
+        bin_value = dec2bin(bfixed(i), bit_width);
+    end
+    fprintf(file_bin, '%s\n', bin_value);
+end
+
+% Close file
+fclose(file_bin);
+
+disp('Binary coefficients saved to "coeffs_binary.mem".');
