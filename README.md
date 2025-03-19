@@ -36,7 +36,8 @@ Images are referenced from Keshab K. Parhi - VLSI Digital Signal Processing Syst
 
 3. Combined Parallel and Pipeline (L=3) Explanation
 
-[]
+![Combined Parallel and Pipeline](https://github.com/user-attachments/assets/0cba062f-051c-4e3a-9b0c-b96961ba3280)
+
 
 ## Testing Using ModelSim and Results
 
