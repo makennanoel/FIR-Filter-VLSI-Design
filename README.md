@@ -21,9 +21,20 @@ This project focuses on designing and implementing an **FIR filter** with **99 t
 ## FIR Filter VLSI Architecture Explanation
 
 3 Different Architectures are explored:
+
 1. Pipelined
-2. Parallel (L=3) and (L=4)
-3. Combined Parallel and Pipeline (L=3)
+
+![Pipelined FIR Filter](https://github.com/user-attachments/assets/f734bc82-ed40-458a-9e4e-491e0d73bd43)
+
+3. Parallel (L=2) and (L=3)
+
+![Reduced Complexity Parallel FIR Filter L=2](https://github.com/user-attachments/assets/63ebf88c-1963-4789-8c93-fca510068946)
+
+![Reduced Complexity Parallel FIR Filter L=3](https://github.com/user-attachments/assets/ee68a847-7be3-481d-85b3-f8e4fa9e0aa8)
+
+Images are referenced from Keshab K. Parhi - VLSI Digital Signal Processing Systems Design and Implementation-Wiley-Interscience (1999).
+
+4. Combined Parallel and Pipeline (L=3)
 
 ## Testing Using ModelSim and Results
 
@@ -32,3 +43,4 @@ This project focuses on designing and implementing an **FIR filter** with **99 t
 ## References
 [1]“Parks-McClellan Bandpass Filter,” Mathworks.com, 2025. https://www.mathworks.com/help/signal/ref/firpm.html#mw_a610b0ff-bc10-4a9f-8b0b-188c89429bc3 (accessed Mar. 15, 2025).
 [2]“Parks-McClellan optimal FIR filter order estimation - MATLAB firpmord,” www.mathworks.com. https://www.mathworks.com/help/signal/ref/firpmord.html
+[3]"K. K. Parhi, VLSI Digital Signal Processing Systems: Design and Implementation." New York, NY, USA: Wiley-Interscience, 1999.
