@@ -7,12 +7,12 @@ This project focuses on designing and implementing an **FIR filter** with **99 t
 
 ## Matlab Filter Design: MATLAB Coefficient Calculations & Quantization
 
-1. **Unquantized Coefficient Magnitude and Phase Response**  
+1. **Magnitude and Phase Responses of FIR Filter Before Coefficient Quantization**  
    ![Unquantized Magnitude Response](https://github.com/user-attachments/assets/afe96a06-a256-4c57-88d4-1a3d17840e85)
 
    ![Unquantized Phase Response](https://github.com/user-attachments/assets/07f730af-1268-4c5a-b5ea-aecd9cae9750)
 
-2. **Quantized Coefficient Magnitude and Phase Response**  
+2. **Magnitude and Phase Responses of FIR Filter After Coefficient Quantization**  
 
     ![Quantized Magnitude Response](https://github.com/user-attachments/assets/75938ff6-e1bc-42b9-a0ea-d166a581ed9f)
 
