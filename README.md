@@ -69,6 +69,9 @@ Resource Utilization:
 Clock Frequency Estimate:
 ![Clock Frequency of Parallel and Pipeline](https://github.com/user-attachments/assets/e1c53ec5-3df4-4d06-ac1a-8a1b99cf6ad0)
 
+## Future Plans
+
+This project is an iterative effort, and I am continuing to refine the implementation by addressing any minor logistical issues and optimizing performance. Current areas of focus include improving testbench validation, ensuring accuracy in hardware verification, and further streamlining the design for resource efficiency. As testing progresses, I aim to enhance the robustness of the architecture while maintaining correctness and computational efficiency.
 
 ## References
 [1]“Parks-McClellan Bandpass Filter,” Mathworks.com, 2025. https://www.mathworks.com/help/signal/ref/firpm.html#mw_a610b0ff-bc10-4a9f-8b0b-188c89429bc3 (accessed Mar. 15, 2025).
